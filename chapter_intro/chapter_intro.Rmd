@@ -1,7 +1,7 @@
 ---
 title: "ScPoEconometrics"
 subtitle: "Introduction"
-author: "Mylène Feuillade, Gustave Kenedi, Florian Oswald and Junnan He"
+author: "Mylène Feuillade, Gustave Kenedi, Florian Oswald, Junnan He, Daniel Gyetvai"
 date: "Sciences Po Paris </br> `r Sys.Date()`"
 output:
   xaringan::moon_reader:
@@ -41,6 +41,7 @@ library(tidyverse)
 library(pander)
 library(ggthemes)
 library(gapminder)
+library(emo)
 library(countdown)
 library(xaringanExtra)
 
@@ -74,11 +75,11 @@ countdown(
 
 - A set of ***techniques and methods*** to answer (economic) questions with ***data***.
 
-- Some examples!
+- Some examples.
 
 ---
 
-# Answering Important Questions with Econometrics
+# Some Examples of Questions in Econometrics
 
 [<ru-blockquote>
 Does immigration *lead to* lower wages and/or higher unemployment for locals?
@@ -126,12 +127,57 @@ Does the neighborhood you grew up in have an *impact* on your life outcomes?
 
 * ["Credibility Revolution"](https://www.aeaweb.org/articles?id=10.1257/jep.24.2.3) in econometrics over the past 30 years ([2022 Economics Nobel](https://www.nobelprize.org/prizes/economic-sciences/2021/press-release/) awarded to some of the main protagonists of this "revolution")
 
+
+---
+
+# This course: Introduction to Econometrics...
+
+--
+
+### Econometrics is a set of ***techniques and methods*** ... 
+
+--
+* ... and requires first and foremost adopting ***certain ways of thinking*** ...
+
+    * ... about the process by which the data we have were generated.
+
+--
+* Although we will cover methods leading up to and including ***linear regression***, ... 
+
+--
+* ... econometrics is not about running regressions, ***econometrics is about thinking***.
+
+    * Learning to think and thinking itself ***takes more time*** than learning to run regressions using software.
+
+    * ***One*** carefully developed ***thought*** is ***worth more than*** a ***dozen of thoughtless regressions***.
+
+---
+
+# This course: Introduction to Econometrics...
+
+--
+### ... to answer questions with ***data***.
+
+--
+* In econometrics we are constrained by what is 
+        
+    * ***reliably***
+        
+    * ***feasibly***
+        
+    * ***legally*** and ***ethically***
+    
+    ***observable*** and ***measurable***.
+
+--
+* In this course, we will use ***data available on the internet*** with all their advantages and limitations.
+
 ---
 
 layout: false
 class: title-slide-section-red, middle
 
-# R
+# ...with R
 
 ---
 
@@ -151,7 +197,7 @@ layout: true
 
 .footnote[
 [1]: This list has been inspired by [Ed Rubin's](https://github.com/edrubin/EC421S19).  
-<span style="visibility:hidden">[2]: Learning `R` definitely requires time and effort but it's worth it, trust me! .</span>
+<span style="visibility:hidden">[2]: Learning `R` definitely requires time and effort but it's worth it, trust me! `r emo::ji("muscle")`.</span>
 ]
 
 --
@@ -172,7 +218,7 @@ layout: true
 
 .footnote[
 <span style="visibility:hidden">[1]: This list has been inspired by [Ed Rubin's](https://github.com/edrubin/EC421S19).</span>  
-[2]: Learning `R` definitely requires time and effort but it's worth it, trust me! 
+[2]: Learning `R` definitely requires time and effort but it's worth it, trust me! `r emo::ji("muscle")`
 ]
 
 <!-- --- -->
@@ -254,7 +300,7 @@ head(gapminder,n = 4)
 
 # In Practice: Data Wrangling
 
-* There are always several ways to achieve a goal. (As in life 😁)
+* There are always several ways to achieve a goal. (As in life `r emo::ji("smile")`)
 
 * Here we will only focus on the `dplyr` way:
 
@@ -303,7 +349,7 @@ ggplot(data = gapminder_dplyr,
 
 ---
 
-# Animated Plotting 👌 <sup>1</sup>
+# Animated Plotting `r emo::ji("ok_hand")` <sup>1</sup>
 
 ```{r, example: gganimate, include = F, cache = T}
 # The package for animating ggplot2
@@ -414,9 +460,7 @@ class: inverse
 
 # Task 1
 
-```{r}
-countdown(minutes = 5, top = 0)
-```
+`r countdown(minutes = 5, top = 0)`
 
 1. Create a new R script (File $\rightarrow$ New File $\rightarrow$ R Script). Save it somewhere as `lecture_intro.R`.
 
@@ -668,79 +712,100 @@ layout: true
 
 ---
 
-# This Course
+<!-- # This Course -->
 
-- Teach you the basics of ***linear regression***, ***statistical inference*** and ***impact evaluation***.
+<!-- - Teach you the basics of ***linear regression***, ***statistical inference*** and ***impact evaluation***. -->
 
---
+<!-- -- -->
 
-- Equip you with a framework to think more deeply about ***causality***.
+<!-- - Equip you with a framework to think more deeply about ***causality***. -->
 
---
+<!-- -- -->
 
-- Introduce you to the `R` software environment.
+<!-- - Introduce you to the `R` software environment. -->
 
---
+<!-- -- -->
 
-- ⚠️ This is *not* a course about `R`.
+<!-- - `r emo::ji("warning")` This is *not* a course about `R`. -->
 
---
+<!-- -- -->
 
-## Grading
-
-1. There will be ***five quizzes*** on Moodle roughly every two weeks $\rightarrow$ 40%
+# Grading
 
 --
 
-1. There will be ***two take home exams / case studies*** $\rightarrow$ 60%
+* ***Only take-home*** assignments. 
+    
+    * There will be ***no in-class assignment***.
+    
+    * There will be ***no exam***.
 
 --
 
-1. There will be _no_ final exam 😅
+* There will be **three quizzes** on Moodle. [3 $\times$ 10% = 30%]
+
+    * Submitted ***individually***.
+
+    * ***One*** quiz ***at a time***.
+
+    * Each quiz ***announced in advance***.
+
+    * You will have ***one week to complete*** each.
 
 ---
 
-# Syllabus 🤞
+# Grading
 
-.pull-left[
-Lecture 1 (today): ***Introduction***
+--
 
-*Quiz 1 (after lecture 2)*
+* There will be a **midterm case study** [30%]
 
-Lectures 2 and 3: ***Tidying, Visualising and Summarising Data***
+    * Can be done ***alone or in groups of 2-3***.
 
-*Quiz 2*
+    * ***Topic and data***: both will be ***assigned***, i.e. no need to choose.
+    
+    * Timing: $\approx$ mid-March.
+    
+    * You will have ***two weeks to complete it***.
 
-Lecture 4: ***Simple Linear Regression***
+--
 
-Lecture 5: ***Introduction to Causality***
+* There will be a **final project case study** [40%]
+
+    * Can be done ***alone or in groups of 2-3***.
+
+    * ***Topic and data***: chosen by ***yourself/ves***.
+    
+    * Needs to ***include multiple linear regression analysis***.
+    
+    * Deadline: $\approx$ end of April / beginning of May.
+
+<!-- -- -->
+<!-- 1. There will be _no_ final exam `r emo::ji("sweat_smile")` -->
+
+---
+
+# Syllabus `r emo::ji("crossed_fingers")`
+
+Session 1 (today): ***Introduction***
+
+Sessions 2, 3, 4: ***Tidying, Visualising and Summarising Data***
+
+Sessions 4, 5: ***Simple Linear Regression***
+
+Sessions 5, 6: ***Introduction to Causality***
+
+Sessions 7, 8: ***Multiple Linear Regression***
 
 *Midterm Project*
 
-Lecture 6: ***Multiple Linear Regression***
+Sessions 8, 9: ***Linear Regression Extensions***
 
-Lecture 7: ***Linear Regression Extensions***
-]
+Sessions 10, 11: ***Sampling, Confidence Intervals and Hypothesis Testing***
 
-.pull-right[
-*Quiz 3*
-
-Lecture 8: ***Sampling***
-
-Lecture 9: ***Confidence Intervals and Hypothesis Testing***
-
-*Quiz 4*
-
-Lecture 10: ***Statistical Inference***
-
-Lecture 11: ***Regression Discontinuity***
-
-*Quiz 5*
-
-Lecture 12: ***Recap***
+Sessions 11, 12: ***Statistical Inference, Regression Inference***
 
 *Final Project*
-]
 
 ---
 
@@ -777,31 +842,21 @@ Lecture 12: ***Recap***
 
 --
 
-(BTW you should apply these principles outside of the classroom as well ***#lifeadvice*** 😉)
+***Communication***
+
+* By default, and especially for urgent matters, ***contact by email***.
+
+* We will use ***Slack mostly for exchanging code***.
 
 --
 
-.pull-left[
-***Slack***
-
-We will ***exclusively*** use Slack for our interactions.
-
-Please ***DO NOT*** contact me by email (unless there's a legitimate reason to).
-
-I will be checking Slack sparingly so please help one another!
-]
-
---
-
-.pull-right[
 ***Class conduct and expectations***
 
-*Late work:* Won't be accepted unless you have a very good reason.
+* *Late work:* Will not be accepted unless you have a very good reason.
 
-*Cheating:* You will get 0. Just don't cheat, it's honestly not worth it.
+* *Cheating:* You will get 0. Just do not cheat, it is honestly not worth it.
 
-*Work in groups:* You can/should work in groups of 2-3 on the quizzes.
-]
+* *Working in groups:* You are encouraged to work together as much as possible. Be inclusive. Do not free ride.
 
 ---
 
@@ -821,7 +876,7 @@ Don't hesitate to ***reach out*** to your friends, family, any professor (includ
 
 ---
 
-# Last But Not Least: Class Rep 
+# Last But Not Least: Class Rep `r emo::ji("man_raising_hand")` `r emo::ji("woman_raising_hand")`
 
 .center[![:scale 60%](chapter_intro_files/figure-html/notme.gif)]
 

@@ -3,7 +3,7 @@
   <head>
     <title>ScPoEconometrics</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Mylène Feuillade, Gustave Kenedi, Florian Oswald and Junnan He" />
+    <meta name="author" content="Mylène Feuillade, Gustave Kenedi, Florian Oswald, Junnan He, Daniel Gyetvai" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/countdown/countdown.css" rel="stylesheet" />
@@ -23,10 +23,10 @@ class: center, middle, inverse, title-slide
 ## Introduction
 ]
 .author[
-### Mylène Feuillade, Gustave Kenedi, Florian Oswald and Junnan He
+### Mylène Feuillade, Gustave Kenedi, Florian Oswald, Junnan He, Daniel Gyetvai
 ]
 .date[
-### Sciences Po Paris </br> 2023-02-09
+### Sciences Po Paris </br> 2024-01-28
 ]
 
 ---
@@ -58,11 +58,11 @@ layout: true
 
 - A set of ***techniques and methods*** to answer (economic) questions with ***data***.
 
-- Some examples!
+- Some examples.
 
 ---
 
-# Answering Important Questions with Econometrics
+# Some Examples of Questions in Econometrics
 
 [&lt;ru-blockquote&gt;
 Does immigration *lead to* lower wages and/or higher unemployment for locals?
@@ -110,12 +110,57 @@ Does the neighborhood you grew up in have an *impact* on your life outcomes?
 
 * ["Credibility Revolution"](https://www.aeaweb.org/articles?id=10.1257/jep.24.2.3) in econometrics over the past 30 years ([2022 Economics Nobel](https://www.nobelprize.org/prizes/economic-sciences/2021/press-release/) awarded to some of the main protagonists of this "revolution")
 
+
+---
+
+# This course: Introduction to Econometrics...
+
+--
+
+### Econometrics is a set of ***techniques and methods*** ... 
+
+--
+* ... and requires first and foremost adopting ***certain ways of thinking*** ...
+
+    * ... about the process by which the data we have were generated.
+
+--
+* Although we will cover methods leading up to and including ***linear regression***, ... 
+
+--
+* ... econometrics is not about running regressions, ***econometrics is about thinking***.
+
+    * Learning to think and thinking itself ***takes more time*** than learning to run regressions using software.
+
+    * ***One*** carefully developed ***thought*** is ***worth more than*** a ***dozen of thoughtless regressions***.
+
+---
+
+# This course: Introduction to Econometrics...
+
+--
+### ... to answer questions with ***data***.
+
+--
+* In econometrics we are constrained by what is 
+        
+    * ***reliably***
+        
+    * ***feasibly***
+        
+    * ***legally*** and ***ethically***
+    
+    ***observable*** and ***measurable***.
+
+--
+* In this course, we will use ***data available on the internet*** with all their advantages and limitations.
+
 ---
 
 layout: false
 class: title-slide-section-red, middle
 
-# R
+# ...with R
 
 ---
 
@@ -135,7 +180,7 @@ layout: true
 
 .footnote[
 [1]: This list has been inspired by [Ed Rubin's](https://github.com/edrubin/EC421S19).  
-&lt;span style="visibility:hidden"&gt;[2]: Learning `R` definitely requires time and effort but it's worth it, trust me! .&lt;/span&gt;
+&lt;span style="visibility:hidden"&gt;[2]: Learning `R` definitely requires time and effort but it's worth it, trust me! 💪.&lt;/span&gt;
 ]
 
 --
@@ -156,7 +201,7 @@ layout: true
 
 .footnote[
 &lt;span style="visibility:hidden"&gt;[1]: This list has been inspired by [Ed Rubin's](https://github.com/edrubin/EC421S19).&lt;/span&gt;  
-[2]: Learning `R` definitely requires time and effort but it's worth it, trust me! 
+[2]: Learning `R` definitely requires time and effort but it's worth it, trust me! 💪
 ]
 
 &lt;!-- --- --&gt;
@@ -247,7 +292,7 @@ head(gapminder,n = 4)
 
 # In Practice: Data Wrangling
 
-* There are always several ways to achieve a goal. (As in life 😁)
+* There are always several ways to achieve a goal. (As in life 😄)
 
 * Here we will only focus on the `dplyr` way:
 
@@ -408,12 +453,7 @@ class: inverse
 
 # Task 1
 
-
-```r
-countdown(minutes = 5, top = 0)
-```
-
-<div class="countdown" id="timer_88be284d" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_2ad82a34" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -566,7 +606,7 @@ class: inverse
 
 # Task 2
 
-<div class="countdown" id="timer_709bff92" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_c6898858" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">07</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -744,7 +784,7 @@ class: inverse
 
 # Task 3
 
-<div class="countdown" id="timer_ab6efa17" data-update-every="1" tabindex="0" style="top:0;right:0;">
+<div class="countdown" id="timer_b9dc1d6e" data-update-every="1" tabindex="0" style="top:0;right:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">&minus;</button><button class="countdown-bump-up">&plus;</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -780,79 +820,100 @@ layout: true
 
 ---
 
-# This Course
+&lt;!-- # This Course --&gt;
 
-- Teach you the basics of ***linear regression***, ***statistical inference*** and ***impact evaluation***.
+&lt;!-- - Teach you the basics of ***linear regression***, ***statistical inference*** and ***impact evaluation***. --&gt;
 
---
+&lt;!-- -- --&gt;
 
-- Equip you with a framework to think more deeply about ***causality***.
+&lt;!-- - Equip you with a framework to think more deeply about ***causality***. --&gt;
 
---
+&lt;!-- -- --&gt;
 
-- Introduce you to the `R` software environment.
+&lt;!-- - Introduce you to the `R` software environment. --&gt;
 
---
+&lt;!-- -- --&gt;
 
-- ⚠️ This is *not* a course about `R`.
+&lt;!-- - ⚠️ This is *not* a course about `R`. --&gt;
 
---
+&lt;!-- -- --&gt;
 
-## Grading
-
-1. There will be ***five quizzes*** on Moodle roughly every two weeks `\(\rightarrow\)` 40%
+# Grading
 
 --
 
-1. There will be ***two take home exams / case studies*** `\(\rightarrow\)` 60%
+* ***Only take-home*** assignments. 
+    
+    * There will be ***no in-class assignment***.
+    
+    * There will be ***no exam***.
 
 --
 
-1. There will be _no_ final exam 😅
+* There will be **three quizzes** on Moodle. [3 `\(\times\)` 10% = 30%]
+
+    * Submitted ***individually***.
+
+    * ***One*** quiz ***at a time***.
+
+    * Each quiz ***announced in advance***.
+
+    * You will have ***one week to complete*** each.
+
+---
+
+# Grading
+
+--
+
+* There will be a **midterm case study** [30%]
+
+    * Can be done ***alone or in groups of 2-3***.
+
+    * ***Topic and data***: both will be ***assigned***, i.e. no need to choose.
+    
+    * Timing: `\(\approx\)` mid-March.
+    
+    * You will have ***two weeks to complete it***.
+
+--
+
+* There will be a **final project case study** [40%]
+
+    * Can be done ***alone or in groups of 2-3***.
+
+    * ***Topic and data***: chosen by ***yourself/ves***.
+    
+    * Needs to ***include multiple linear regression analysis***.
+    
+    * Deadline: `\(\approx\)` end of April / beginning of May.
+
+&lt;!-- -- --&gt;
+&lt;!-- 1. There will be _no_ final exam 😅 --&gt;
 
 ---
 
 # Syllabus 🤞
 
-.pull-left[
-Lecture 1 (today): ***Introduction***
+Session 1 (today): ***Introduction***
 
-*Quiz 1 (after lecture 2)*
+Sessions 2, 3, 4: ***Tidying, Visualising and Summarising Data***
 
-Lectures 2 and 3: ***Tidying, Visualising and Summarising Data***
+Sessions 4, 5: ***Simple Linear Regression***
 
-*Quiz 2*
+Sessions 5, 6: ***Introduction to Causality***
 
-Lecture 4: ***Simple Linear Regression***
-
-Lecture 5: ***Introduction to Causality***
+Sessions 7, 8: ***Multiple Linear Regression***
 
 *Midterm Project*
 
-Lecture 6: ***Multiple Linear Regression***
+Sessions 8, 9: ***Linear Regression Extensions***
 
-Lecture 7: ***Linear Regression Extensions***
-]
+Sessions 10, 11: ***Sampling, Confidence Intervals and Hypothesis Testing***
 
-.pull-right[
-*Quiz 3*
-
-Lecture 8: ***Sampling***
-
-Lecture 9: ***Confidence Intervals and Hypothesis Testing***
-
-*Quiz 4*
-
-Lecture 10: ***Statistical Inference***
-
-Lecture 11: ***Regression Discontinuity***
-
-*Quiz 5*
-
-Lecture 12: ***Recap***
+Sessions 11, 12: ***Statistical Inference, Regression Inference***
 
 *Final Project*
-]
 
 ---
 
@@ -889,31 +950,21 @@ Lecture 12: ***Recap***
 
 --
 
-(BTW you should apply these principles outside of the classroom as well ***#lifeadvice*** 😉)
+***Communication***
+
+* By default, and especially for urgent matters, ***contact by email***.
+
+* We will use ***Slack mostly for exchanging code***.
 
 --
 
-.pull-left[
-***Slack***
-
-We will ***exclusively*** use Slack for our interactions.
-
-Please ***DO NOT*** contact me by email (unless there's a legitimate reason to).
-
-I will be checking Slack sparingly so please help one another!
-]
-
---
-
-.pull-right[
 ***Class conduct and expectations***
 
-*Late work:* Won't be accepted unless you have a very good reason.
+* *Late work:* Will not be accepted unless you have a very good reason.
 
-*Cheating:* You will get 0. Just don't cheat, it's honestly not worth it.
+* *Cheating:* You will get 0. Just do not cheat, it is honestly not worth it.
 
-*Work in groups:* You can/should work in groups of 2-3 on the quizzes.
-]
+* *Working in groups:* You are encouraged to work together as much as possible. Be inclusive. Do not free ride.
 
 ---
 
@@ -933,7 +984,7 @@ Don't hesitate to ***reach out*** to your friends, family, any professor (includ
 
 ---
 
-# Last But Not Least: Class Rep 
+# Last But Not Least: Class Rep 🙋‍♂️ 🙋‍♀️
 
 .center[![:scale 60%](chapter_intro_files/figure-html/notme.gif)]
 

@@ -734,7 +734,7 @@ layout: true
 
 --
 
-* ***Only take-home*** assignments. 
+* ***Only take-home*** assignments to be submitted via moodle: [https://moodle.sciences-po.fr/course/view.php?id=39709](https://moodle.sciences-po.fr/course/view.php?id=39709)
     
     * There will be ***no in-class assignment***.
     
@@ -844,7 +844,8 @@ Sessions 11, 12: ***Statistical Inference, Regression Inference***
 
 ***Communication***
 
-* By default, and especially for urgent matters, ***contact by email***.
+* By default, and especially for urgent matters, ***contact by email***:
+[daniel.gyetvai@sciencespo.fr](mailto:daniel.gyetvai@sciencespo.fr)
 
 * We will use ***Slack mostly for exchanging code***.
 

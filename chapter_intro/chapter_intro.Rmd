@@ -845,7 +845,7 @@ Sessions 11, 12: ***Statistical Inference, Regression Inference***
 ***Communication***
 
 * By default, and especially for urgent matters, ***contact by email***:
-[daniel.gyetvai@sciencespo.fr](mailto:daniel.gyetvai@sciencespo.fr)
+[daniel.gyetvai@sciencespo.fr](mailto:daniel.gyetvai@sciencespo.fr) (for Paris), [jeteesha.foollee@sciencespo.fr](mailto:jeteesha.foollee@sciencespo.fr) (for Reims) 
 
 * We will use ***Slack mostly for exchanging code***.
 
